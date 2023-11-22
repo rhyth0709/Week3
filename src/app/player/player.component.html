@@ -1,0 +1,41 @@
+<div class="playerBiddingPrice">{{newPlayer.biddingPrice}}</div>
+
+<div class="container">
+    <div class="jumbotron">
+       <h1 class="text-warning">Player Listing</h1>
+         <table class="table">
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>TeamID</th>
+                <th>Category</th>
+                <th>Bidding Price</th>
+
+            </thead>
+            <tbody>
+                <ul *ngFor="let m of playerdata;let i=index">
+                    <li>{{m.name}}</li>
+                    <li>{{m.age}}</li>
+                    <li>{{m.teamID}}</li>
+                    <li>{{m.category}}</li>
+                    <li class="playerBiddingPrice">{{m.biddingPrice}}</li>
+
+                    <li>
+                        <button [routerLink] = "['/find/',m.id]">Details</button>
+                    </li>
+                    <li>
+                        <button [routerLink] = "['/edit/',m.id]">Edit</button>
+                        <button [routerLink] = "['/delete/',m.id]">Delete</button>
+                    </li>
+                    <li>
+                       
+                    </li>
+
+                </ul>
+            </tbody>        
+        </table>
+    </div>
+</div>
+
+<p id="playerBiddingPrice"></p>

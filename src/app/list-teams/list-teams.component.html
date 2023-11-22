@@ -1,0 +1,29 @@
+<div>
+
+    <table class="table">
+        <thead>
+            <th>Team ID</th>
+            <th>Name</th>
+            <th>Maximum Price</th>
+
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor="let t of teams">
+                <td>{{t.teamID}}</td>
+                <td>{{t.name}}</td>
+                <td>{{t.maximumBudget}}</td>
+               <td>
+                <a [routerLink] = "['/ed/',t.teamID]">Edit</a>
+
+               </td>
+                <td>
+                    <a [routerLink]="['/del/',t.teamID]">Delete</a>
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>
